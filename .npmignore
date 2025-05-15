@@ -1,0 +1,23 @@
+# 源代码目录（只发布dist）
+src/
+public/
+
+# 构建和配置文件
+.gitignore
+vite.config.ts
+vite.lib.config.ts
+index.html
+tsconfig.json
+tsconfig.node.json
+postcss.config.js
+tailwind.config.js
+
+# 开发和测试文件
+node_modules/
+*.log
+.vscode/
+.idea/
+
+# 其他无关文件
+yarn.lock
+package-lock.json

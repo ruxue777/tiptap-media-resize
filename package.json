@@ -1,0 +1,62 @@
+{
+  "name": "tiptap-media-resize",
+  "version": "1.0.0",
+  "description": "可调整大小的媒体扩展，用于Tiptap编辑器",
+  "author": {
+    "name": "your-name"
+  },
+  "license": "MIT",
+  "keywords": [
+    "tiptap",
+    "tiptap-extension",
+    "wysiwyg",
+    "editor",
+    "media",
+    "resize",
+    "vue"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "main": "dist/tiptap-media-resize.umd.js",
+  "module": "dist/tiptap-media-resize.es.js",
+  "types": "dist/types.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/tiptap-media-resize.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "build:lib": "vue-tsc --noEmit && vite build --config vite.lib.config.ts",
+    "build:types": "cp src/types.ts dist/types.d.ts",
+    "prepublishOnly": "npm run build:lib && npm run build:types",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tiptap/starter-kit": "^2.0.0-beta.191",
+    "@tiptap/vue-3": "^2.0.0-beta.96",
+    "daisyui": "^2.19.0",
+    "install": "^0.13.0",
+    "npm": "^8.13.2",
+    "vue": "^3.2.25",
+    "vue-inline-svg": "^3.1.0",
+    "vue-tippy": "^6.0.0-alpha.60"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.1.26",
+    "@tailwindcss/typography": "^0.5.3",
+    "@types/node": "^22.15.18",
+    "@unocss/preset-icons": "^0.44.0",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "sass": "^1.53.0",
+    "tailwindcss": "^3.1.5",
+    "typescript": "^4.5.4",
+    "unocss": "^0.44.0",
+    "vite": "^2.9.9",
+    "vue-tsc": "^0.34.7"
+  }
+}

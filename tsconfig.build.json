@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "dist/types",
+    "outDir": "dist/types"
+  },
+  "include": [
+    "src/lib.ts",
+    "src/components/resizableMedia/resizableMedia.ts",
+    "src/shims.d.ts"
+  ],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
+}
