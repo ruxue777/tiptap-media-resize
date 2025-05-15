@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "可调整大小的媒体扩展，用于Tiptap编辑器",
   "author": {
-    "name": "your-name"
+    "name": "ruxue777"
   },
   "license": "MIT",
   "keywords": [
@@ -24,7 +24,7 @@
   "types": "dist/types.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/tiptap-media-resize.git"
+    "url": "https://github.com/ruxue777/tiptap-media-resize"
   },
   "scripts": {
     "dev": "vite",
