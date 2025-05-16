@@ -18,10 +18,15 @@
 
 <script setup lang="ts">
 import { useEditor, EditorContent } from "@tiptap/vue-3";
+
+// 引入样式 - 这一步很关键
+import "tiptap-media-resize/dist/style.css";
+import { ResizableMedia } from "tiptap-media-resize";
+
 import StarterKit from "@tiptap/starter-kit";
 import { ref } from "vue";
 
-import { ResizableMedia } from "./resizableMedia";
+// import { ResizableMedia } from "./resizableMedia";
 import { content } from "./tiptapData";
 
 const editor = useEditor({
@@ -36,7 +41,7 @@ const editor = useEditor({
 
 const addImage = () =>
   editor.value?.commands.setMedia({
-    src: "https://source.unsplash.com/8xznAGy4HcY/800x400",
+    src: "https://vastweb-oss.wepolices.com/goss/other/2025/05/16/cTnUnrMm.JPG",
     "media-type": "img",
 
     alt: "Something else",

@@ -32,6 +32,8 @@ pnpm add tiptap-media-resize
 ```typescript
 import { Editor } from '@tiptap/core'
 import StarterKit from '@tiptap/starter-kit'
+// 引入样式！
+import "tiptap-media-resize/dist/style.css";
 import { ResizableMedia } from 'tiptap-media-resize'
 
 const editor = new Editor({

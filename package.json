@@ -1,6 +1,6 @@
 {
   "name": "tiptap-media-resize",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "可调整大小的媒体扩展，用于Tiptap编辑器",
   "author": {
     "name": "ruxue777"
