@@ -1,6 +1,6 @@
 {
   "name": "tiptap-media-resize",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "可调整大小的媒体扩展，用于Tiptap编辑器",
   "author": {
     "name": "ruxue777"
@@ -42,7 +42,7 @@
     "npm": "^8.13.2",
     "vue": "^3.2.25",
     "vue-inline-svg": "^3.1.0",
-    "vue-tippy": "^6.0.0-alpha.60"
+    "vue-tippy": "v6"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.26",

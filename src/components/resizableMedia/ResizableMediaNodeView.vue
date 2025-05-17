@@ -4,11 +4,14 @@ import { ref, onMounted, computed, watch } from "vue";
 import { Node as ProseMirrorNode } from "prosemirror-model";
 import { Decoration } from "prosemirror-view";
 import InlineSvg from "vue-inline-svg";
-// 直接导入 TippyComponent
-import { TippyComponent } from "vue-tippy";
+// 组件级别导入 Tippy
+import { Tippy, directive as tippyDirective } from "vue-tippy";
 import "tippy.js/dist/tippy.css";
-
 import { resizableMediaActions } from "./resizableMediaMenuUtil";
+
+// 在组件中注册 tippy 指令
+// Vue 的命名约定：vTippy 将自动注册为 v-tippy 指令
+const vTippy = tippyDirective;
 
 interface Props {
   editor: Editor;
@@ -251,7 +254,7 @@ const isAlign = computed<boolean>(() => !!props.node.attrs.dataAlign);
       `${(isAlign && `align-${props.node.attrs.dataAlign}`) || ''}`,
     ]"
   >
-    <TippyComponent :interactive="true">
+    <Tippy :interactive="true" arrow theme="light" placement="top">
       <div class="relative flex w-fit">
         <img
           v-if="mediaType === 'img'"
@@ -302,7 +305,11 @@ const isAlign = computed<boolean>(() => !!props.node.attrs.dataAlign);
           <button
             v-for="(mediaAction, i) in resizableMediaActions"
             :key="i"
-            v-tippy="{ content: mediaAction.tooltip, placement: 'top' }"
+            v-tippy="{
+              content: mediaAction.tooltip,
+              placement: 'top',
+              theme: 'light',
+            }"
             :content="mediaAction.tooltip"
             class="btn btn-sm btn-ghost image-action-button"
             @click="
@@ -315,7 +322,7 @@ const isAlign = computed<boolean>(() => !!props.node.attrs.dataAlign);
           </button>
         </section>
       </template>
-    </TippyComponent>
+    </Tippy>
   </node-view-wrapper>
 </template>
 
